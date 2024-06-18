@@ -21,9 +21,10 @@ gitclone() {
 }
 
 install() {
-	cd "$DOT_LOCATION"
-	sudo make install ./my-dwm/
-	sudo make install ./my-dwmstatus/
+	cd "$DOT_LOCATION/my-dwm"
+	sudo make install
+	cd "$DOT_LOCATION/my-dwmstatus"
+	sudo make install
 }
 
 if command -v pacman &>/dev/null; then
