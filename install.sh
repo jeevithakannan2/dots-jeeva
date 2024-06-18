@@ -42,7 +42,8 @@ if command -v pacman &>/dev/null; then
 			echo "Cloning failed !!"
 		fi
 	fi
-
+	echo "Installing dwm and dwmstatus"
+	install
 else
 	echo "Arch system not found"
 	exit 1
