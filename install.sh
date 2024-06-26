@@ -20,7 +20,7 @@ gitclone() {
 	git clone https://github.com/jeevithakannan2/my-dwmstatus.git --depth 1 "$DOT_LOCATION/my-dwmstatus"
 }
 
-intsall_dep() {
+install_dep() {
 	pacman -Sy xorg-server libxinerama libxft imlib2 --needed
 }
 
