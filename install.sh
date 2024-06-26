@@ -20,6 +20,10 @@ gitclone() {
 	git clone https://github.com/jeevithakannan2/my-dwmstatus.git --depth 1 "$DOT_LOCATION/my-dwmstatus"
 }
 
+intsall_dep() {
+	pacman -Sy xorg-server libxinerama libxft imlib2 --needed
+}
+
 install() {
 	cd "$DOT_LOCATION/my-dwm"
 	sudo make install
@@ -44,6 +48,7 @@ if command -v pacman &>/dev/null; then
 		fi
 	fi
 	echo "Installing dwm and dwmstatus"
+	install_dep
 	install
 else
 	echo "Arch system not found"
