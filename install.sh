@@ -21,7 +21,7 @@ gitclone() {
 }
 
 install_dep() {
-	pacman -Sy xorg-server libxinerama libxft imlib2 --needed
+	sudo pacman -Sy xorg-server libxinerama libxft imlib2 --needed
 }
 
 install() {
@@ -47,8 +47,9 @@ if command -v pacman &>/dev/null; then
 			echo "Cloning failed !!"
 		fi
 	fi
-	echo "Installing dwm and dwmstatus"
+	echo "Installing make dependencies for dwm and dwmstatus"
 	install_dep
+ 	echo "Compiling and installing dwm and dwmstatus"
 	install
 else
 	echo "Arch system not found"
